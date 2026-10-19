@@ -27,7 +27,7 @@ The **eShopOnWeb** sample is related to the [eShopOnContainers](https://github.c
 The goal for this sample is to demonstrate some of the principles and patterns described in the [eBook](https://aka.ms/webappebook). It is not meant to be an eCommerce reference application, and as such it does not implement many features that would be obvious and/or essential to a real eCommerce application.
 
 > ### VERSIONS
-> #### The `main` branch is currently running ASP.NET Core 8.0.
+> #### The `main` branch is currently running ASP.NET Core 10.0.
 > #### Older versions are tagged.
 
 ## Topics (eBook TOC)
@@ -93,6 +93,17 @@ According to the prompt, enter an `env name`, and select `subscription` and `loc
 You can also run the sample directly locally (See below).
 
 ## Running the sample locally
+
+Install the .NET 10 SDK (10.0.402 or a newer stable 10.0 feature band, as allowed by `global.json`).
+All application and test projects target `net10.0`.
+
+To compile all ten C# projects and run the unit tests:
+
+```powershell
+dotnet build Everything.sln --configuration Release
+dotnet test tests\UnitTests\UnitTests.csproj --configuration Release --no-build
+```
+
 Most of the site's functionality works with just the web application running. However, the site's Admin page relies on Blazor WebAssembly running in the browser, and it must communicate with the server using the site's PublicApi web application. You'll need to also run this project. You can configure Visual Studio to start multiple projects, or just go to the PublicApi folder in a terminal window and run `dotnet run` from there. After that from the Web folder you should run `dotnet run --launch-profile Web`. Now you should be able to browse to `https://localhost:5001/`. The admin part in Blazor is accessible to `https://localhost:5001/admin`  
 
 Note that if you use this approach, you'll need to stop the application manually in order to build the solution (otherwise you'll get file locking errors).
