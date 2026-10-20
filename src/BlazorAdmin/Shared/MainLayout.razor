@@ -13,7 +13,10 @@
 <div class="main">
    
     <div class="top-row px-4">
-        <a href="https://github.com/dotnet-architecture/eShopOnWeb" target="_blank" class="ml-md-auto">About eShopOnWeb</a>
+        <button type="button" id="theme-toggle" class="esh-theme-toggle ml-md-auto" aria-pressed="false" aria-label="Switch to dark theme">
+            <span class="esh-theme-toggle-label">Dark theme</span>
+        </button>
+        <a href="https://github.com/dotnet-architecture/eShopOnWeb" target="_blank" class="ml-3">About eShopOnWeb</a>
     </div>
 
     <div class="content px-4">
@@ -33,9 +36,11 @@
                 {
                     await new Route(JSRuntime).RouteOutside("/Identity/Account/Login");
                 }
+
                 CallRequestRefresh();
             }
 
+            await JSRuntime.InvokeVoidAsync("eshopTheme.refresh");
             await base.OnAfterRenderAsync(firstRender);
         }
     }

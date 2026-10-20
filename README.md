@@ -30,6 +30,10 @@ The goal for this sample is to demonstrate some of the principles and patterns d
 > #### The `main` branch is currently running ASP.NET Core 10.0.
 > #### Older versions are tagged.
 
+## Theme
+
+The store and admin pages support light and dark themes. The application follows the browser default (`prefers-color-scheme`) until you choose otherwise. Use the theme button in the header to switch between light and dark. That choice is saved in the browser and overrides the system theme until you switch again.
+
 ## Topics (eBook TOC)
 
 - Introduction
