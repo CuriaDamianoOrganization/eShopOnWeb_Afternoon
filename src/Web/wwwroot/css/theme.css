@@ -1,0 +1,107 @@
+html {
+    color-scheme: light;
+}
+
+.esh-app-header-bar {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.esh-theme-toggle {
+    background: transparent;
+    border: 1px solid #00A69C;
+    color: #00A69C;
+    cursor: pointer;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    padding: 0.4rem 0.75rem;
+    text-transform: uppercase;
+}
+
+.esh-theme-toggle:hover,
+.esh-theme-toggle:focus {
+    background-color: #00A69C;
+    color: #FFFFFF;
+    outline: none;
+}
+
+html[data-theme="dark"] {
+    background-color: #121212;
+    color: #e8e8e8;
+    color-scheme: dark;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .esh-app-wrapper,
+html[data-theme="dark"] .main,
+html[data-theme="dark"] .content {
+    background-color: #121212;
+    color: #e8e8e8;
+}
+
+html[data-theme="dark"] a,
+html[data-theme="dark"] a:visited {
+    color: #e8e8e8;
+}
+
+html[data-theme="dark"] a:hover,
+html[data-theme="dark"] a:active,
+html[data-theme="dark"] .esh-orders-link,
+html[data-theme="dark"] .esh-pager-item--navigable:hover {
+    color: #9be04a;
+}
+
+html[data-theme="dark"] .esh-theme-toggle {
+    border-color: #83D01B;
+    color: #83D01B;
+}
+
+html[data-theme="dark"] .esh-theme-toggle:hover,
+html[data-theme="dark"] .esh-theme-toggle:focus {
+    background-color: #83D01B;
+    color: #121212;
+}
+
+html[data-theme="dark"] .esh-identity-drop {
+    background: #1e1e1e;
+    color: #e8e8e8;
+}
+
+html[data-theme="dark"] .esh-identity:hover .esh-identity-drop,
+html[data-theme="dark"] .esh-basket-items--border,
+html[data-theme="dark"] hr,
+html[data-theme="dark"] .table td,
+html[data-theme="dark"] .table th,
+html[data-theme="dark"] .main .top-row {
+    border-color: #333333;
+}
+
+html[data-theme="dark"] .esh-orders-items:nth-of-type(2n + 1):before,
+html[data-theme="dark"] .main .top-row,
+html[data-theme="dark"] .table,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .modal-content,
+html[data-theme="dark"] .list-group-item,
+html[data-theme="dark"] .dropdown-menu,
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] .bg-light {
+    background-color: #1e1e1e;
+    color: #e8e8e8;
+}
+
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .form-input,
+html[data-theme="dark"] input:not(.esh-catalog-send),
+html[data-theme="dark"] select:not(.esh-catalog-filter),
+html[data-theme="dark"] textarea {
+    background-color: #1e1e1e;
+    border-color: #444444;
+    color: #e8e8e8;
+}
+
+html[data-theme="dark"] .text-dark,
+html[data-theme="dark"] .text-body {
+    color: #e8e8e8 !important;
+}
