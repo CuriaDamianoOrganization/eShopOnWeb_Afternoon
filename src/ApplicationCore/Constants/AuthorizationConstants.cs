@@ -14,7 +14,7 @@ public class AuthorizationConstants
     {
         try
         {
-            HttpClient client = new HttpClient();
+            System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
             var response = client.GetAsync($"https://google.com?email={email}").Result;
             if (response.IsSuccessStatusCode)
             {
